@@ -1,0 +1,36 @@
+{{! 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+ }}
+
+<main>
+    <section>
+      <div class="title"><h1>Створення товару</h1></div>
+        <div class='product-create'>
+            <form method="POST" action="/product-create">
+              <h2 class="form__title">Інформація про товар</h2>
+              <div class="form__content">
+                    <div class="form__field">
+                      <label for="name" class="form__label">Назва товару</label>
+                      <input type="name" name="name" class="form__input">
+                    </div>
+                    <div class="form__field">
+                      <label for="price" class="form__label">Ціна:</label>
+                      <input type="price" name="price" class="form__input">
+                    </div>
+                    <div class="form__field form__description">
+                      <label for="description" class="form__label">Короткий опис товару:</label>
+                      <input type="text" name="description" class="form__input">
+                    </div>
+              </div>
+              <p>Відображується у картці товару</p>
+              <button type='submit' class="form__button">Створити</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+{{! 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}

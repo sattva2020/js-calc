@@ -1,0 +1,106 @@
+@use '../../lib/service.scss' as s;
+
+main {
+  display: flex;
+  padding: s.space(4);
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: s.color('primary');
+  margin-bottom: s.space(2);
+}
+
+.product {
+
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding: s.space(4);
+        border: 1px solid s.color('light');
+        border-radius: 5px;
+        width: 700px;
+        height: max-content;
+        gap: s.space(8);
+
+    &__edit {
+      display: flex;
+      flex-direction: column;
+      padding: s.space(2);
+      box-shadow: 1px 1px 4px 1px rgb(212, 212, 212);
+      height: max-content;
+    }  
+
+    &__edit-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+
+&__edit-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: s.space(5); 
+  padding-bottom: s.space(2);
+}
+
+&__input {
+    display: flex;
+    flex-direction: column;
+    // gap: s.space(1);
+    // padding: 20px;
+}
+
+&__input-wide {
+    display: flex;
+    flex-direction: column;
+    // gap: s.space(1);
+    grid-column: span 3;
+}
+
+&__edit-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: s.space(2);
+}
+
+}
+
+label {
+  font-size: 12px;
+  color: rgb(85, 84, 84);
+}
+
+input {
+  border: 1px solid s.color('light');
+  padding: s.space(1);
+  
+}
+
+p {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: s.space(3);
+}
+
+.button {
+  display: inline-block;
+    padding: s.space(2) ;   
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+
+.button-primary {
+  background-color: s.color('primary');
+
+}
+
+.button-delete {
+  background-color: s.color('danger');
+}

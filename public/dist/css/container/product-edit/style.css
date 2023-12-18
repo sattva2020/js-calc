@@ -1,0 +1,93 @@
+main {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(57, 57, 255);
+  margin-bottom: 8px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 700px;
+  height: max-content;
+  gap: 32px;
+}
+.product__edit {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-shadow: 1px 1px 4px 1px rgb(212, 212, 212);
+  height: max-content;
+}
+.product__edit-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.product__edit-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-bottom: 8px;
+}
+.product__input {
+  display: flex;
+  flex-direction: column;
+}
+.product__input-wide {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 3;
+}
+.product__edit-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+label {
+  font-size: 12px;
+  color: rgb(85, 84, 84);
+}
+
+input {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+p {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 12px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+  color: white;
+}
+
+.button-primary {
+  background-color: rgb(57, 57, 255);
+}
+
+.button-delete {
+  background-color: rgb(188, 21, 21);
+}
+
+/*# sourceMappingURL=style.css.map */

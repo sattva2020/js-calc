@@ -1,0 +1,17 @@
+
+
+{{#with data.product}}
+    {{#if isEmpty}}
+        <div>Error</div>
+        {{else}}
+        {{#each list}}
+        <section class="card">
+            <div class="title_name">{{name}}</div>
+            <div class="body_description">{{description}}</div>
+            <div class="mini_id">Id: {{id}}</div>
+            <div class="price">{{price}}</div>
+            <a class="edit" href="/product-edit?id={{id}}">Редагувати</a>
+        </section>
+        {{/each}}
+    {{/if}}
+{{/with}}
