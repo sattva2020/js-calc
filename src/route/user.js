@@ -4,59 +4,59 @@ const express = require('express')
 const router = express.Router()
 
 // ================================================================
-// class User {
-//   static #list = []
+class User {
+  static #list = []
 
-//   constructor(email, login, password) {
-//     this.email = email
-//     this.login = login
-//     this.password = password
-//     this.id = new Date().getTime()
-//   }
+  constructor(email, login, password) {
+    this.email = email
+    this.login = login
+    this.password = password
+    this.id = new Date().getTime()
+  }
 
-//   verifyPassword = (password) => this.password === password
+  verifyPassword = (password) => this.password === password
 
-//   static add = (user) => {
-//     this.#list.push(user)
-//   }
+  static add = (user) => {
+    this.#list.push(user)
+  }
 
-//   static getList = () => this.#list
+  static getList = () => this.#list
   
 
-//   static getById = (id) => 
-//     this.#list.findI((user) => user.id === id)  
+  static getById = (id) => 
+    this.#list.findI((user) => user.id === id)  
 
-//   static deleteById = (id) => {
-//    const index = this.#list.findIndex(
-//     (user) => user.id === id,
-//     ) 
-//     if (index !== -1) {
-//       this.#list.splice(index, 1)
-//       return true
-//     } else {
-//       return false
-//     }
-//   }
+  static deleteById = (id) => {
+   const index = this.#list.findIndex(
+    (user) => user.id === id,
+    ) 
+    if (index !== -1) {
+      this.#list.splice(index, 1)
+      return true
+    } else {
+      return false
+    }
+  }
 
-//   static updateById = (id, data) => {
-//     const user = this.getById(id)
+  static updateById = (id, data) => {
+    const user = this.getById(id)
 
-//     if (user) {
-//       this.update(user, data) 
+    if (user) {
+      this.update(user, data) 
 
-//       return true
-//     } else {
-//       return false
-//     }
-//   }
+      return true
+    } else {
+      return false
+    }
+  }
 
-//   static update = (user, {email}) => {
-//     if (email) {
-//         user.email = email
-//       }   
-//   }
+  static update = (user, {email}) => {
+    if (email) {
+        user.email = email
+      }   
+  }
 
-// }
+}
 
 // (id, createDate, name, price, description)
 // ================================================================
@@ -130,9 +130,9 @@ router.get('/', function (req, res) {
   const list = User.getList()
 
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('index', {
+  res.render('user-index', {
     // вказуємо назву папки контейнера, в якій знаходяться наші стилі
-    style: 'index',
+    style: 'user-index',
 
     data: {
       users: {
@@ -157,8 +157,8 @@ router.post('/user-create', function (req, res) {
 
 
 
-  res.render('success-info', {
-    style: 'success-info',
+  res.render('user-success-info', {
+    style: 'user-success-info',
     info: 'Користувач створенний',
   })
 })
@@ -171,8 +171,8 @@ router.get('/user-delete', function (req, res) {
 
   User.deleteById(Number(id))
 
-  res.render('success-info', {
-    style: 'success-info',
+  res.render('user-success-info', {
+    style: 'user-success-info',
     info: 'Користувач видаленний',
   })
 })
@@ -193,8 +193,8 @@ router.post('/user-update', function (req, res) {
   }
 
 
-  res.render('success-info', {
-    style: 'success-info',
+  res.render('user-success-info', {
+    style: 'user-success-info',
     info: result
       ? 'Email пошта оновлена'
       : 'Сталася помилка',
