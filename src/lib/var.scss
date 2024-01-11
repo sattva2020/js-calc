@@ -1,9 +1,10 @@
 $colorMap: (
-    light: #ddd,
-    primary: rgb(57, 57, 255),
-    danger: rgb(188, 21, 21)
+  light: #ddd,
+  primary: rgb(57, 57, 255),
+  danger: rgb(188, 21, 21),
+  dark: rgb(12, 12, 12),
 );
 
-@function color ($key) {
-    @return map-get($colorMap, $key);
+@function color($key) {
+  @return map-get($colorMap, $key);
 }
