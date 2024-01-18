@@ -5,11 +5,13 @@
 
 <section class="m-5">
 <div>
-      <h2>{{info}}</h2>
-      <h4>{{info2}}</h4>
+  {{#with data}}
+      <h2>{{message}}</h2>
+      <h4>{{info}}</h4>
+  {{/with}}
   </div>
   <div class="button">
-    <a href="/product-list" class='btn btn-primary'>Повернутися назад</a>
+    <a href="/" class='btn btn-primary'>Повернутися назад</a>
   </div>
 </section>
 
