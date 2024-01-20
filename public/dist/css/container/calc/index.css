@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.calculator {
+  padding: 24px;
+  background-color: #444;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 320px;
+}
+
+.display {
+  height: 60px;
+  padding: 10px;
+  background-color: #888;
+  color: white;
+  text-align: right;
+  font-size: 20px;
+}
+
+.buttons {
+  display: grid;
+  gap: 12px;
+}
+.buttons--big {
+  grid-template-columns: repeat(3, 1fr);
+}
+.buttons--small {
+  grid-template-columns: repeat(2, 1fr);
+}
+.buttons button {
+  background-color: #f2f2f2;
+  color: #444;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.7s;
+}
+.buttons button:hover {
+  background-color: #ddd;
+}
+
+/*# sourceMappingURL=index.css.map */
